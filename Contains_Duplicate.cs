@@ -1,4 +1,4 @@
-// O(n^2)
+// O(n^2) / O(1)
 internal class Program
 {
     private static void Main(string[] args)
@@ -24,7 +24,7 @@ internal class Program
 
 
 
-/* O(n)
+/* O(n) / O(n)
  * using System;
 using System.Collections.Generic;
 
