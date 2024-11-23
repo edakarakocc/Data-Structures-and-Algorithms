@@ -1,4 +1,5 @@
-﻿internal class Program
+// O(n^2) / O(1)
+internal class Program
 {
     private static void Main(string[] args)
     {
@@ -28,3 +29,22 @@
 
     }
 }
+
+
+
+
+/* O(n) / O(1)
+ * internal class Program
+{
+    private static void Main(string[] args)
+    {
+        List<int> nums = new List<int> { 2, 2, 9, 3, 4, 4, 3, 5, 5 };
+        int same = 0;
+        foreach(int num in nums)
+        {  
+            same ^= num; //XOR gate
+        }
+        Console.WriteLine(same);
+        Console.ReadKey();
+    }
+}*/
