@@ -1,5 +1,5 @@
 // O(n^2) / O(1)
-internal class Program
+/* internal class Program
 {
     private static void Main(string[] args)
     {
@@ -26,7 +26,8 @@ internal class Program
         Console.WriteLine(majority_element);
         Console.ReadKey();
     }
-}
+}*/
+
 
 
 
@@ -55,7 +56,6 @@ internal class Program
 
 
 
-
 /* O(n) / O(n)  This shows a different approach to using a dictionary.
  * 
  * internal class Program
@@ -81,6 +81,42 @@ internal class Program
             }
         }
         Console.WriteLine(maxValue);
+        Console.ReadKey();
+    }
+}*/
+
+
+
+
+/* O(n) / O(1)   Boyer Moore Algorithm
+ * 
+ * internal class Program
+{
+    private static void Main(string[] args)
+    {
+        List<int> nums = new List<int> { 2, 2, 1, 1, 1, 2, 2 };
+        int result = nums[0];
+        int count=1;
+
+        for(int i = 1; i < nums.Count; i++)
+        {
+            if (nums[i] == result)
+            {
+                count++;
+                result = nums[i];
+            }
+            else
+            {
+                count--;
+                if (count == 0)
+                {
+                    result = nums[i];
+                    count = 1;
+                }
+            }
+
+        }
+        Console.WriteLine(result);
         Console.ReadKey();
     }
 }*/
